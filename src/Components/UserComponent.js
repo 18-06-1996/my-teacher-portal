@@ -1,11 +1,12 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import { AppState } from "../context/AppProvider";
 import { BaseApp } from "../core/BaseApp";
 
 
-export function UserComponent( {user, setUser}){
+export function UserComponent(){
 
-  
+    const{user, setUser} = AppState();  
 const history= useHistory();
 
     const DeleteUser=(idx)=>{

@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { AppState } from "../context/AppProvider";
 import { BaseApp } from "../core/BaseApp";
 
 
-export function AddUser({user, setUser}){
-
+export function AddUser(){
+    const{user, setUser} = AppState();
 const history = useHistory();
 
 const [id,setId] = useState('');

@@ -10,74 +10,49 @@ import { TeacherComponent } from './Components/TeacherComponents';
 import { TeacherDetails } from './Components/TeacherDetails';
 import { UserComponent } from './Components/UserComponent';
 import { UserDetails } from './Components/UserDetails';
+import { AppState } from './context/AppProvider';
 import { BaseApp } from './core/BaseApp';
 import { data } from './Data/Data';
 import { dataTeacher } from './Data/DataTeacher';
 
 function App() {
-  const[user, setUser] = useState(data);
-
-  const [mentor,setMentor] = useState(dataTeacher);
-
+  
   return (
     <div className="App">
      
      <Switch>
 
 <Route exact path="/">
-    <UserComponent
-    user = {user}
-    setUser = {setUser}
-    />
+    <UserComponent/>
 </Route>
 
 <Route  path="/teacher">
-    <TeacherComponent
-    mentor={mentor}
-    setMentor={setMentor}
-    />
+    <TeacherComponent/>
 </Route>
 
 <Route  path="/add/user">
-    <AddUser
-    user = {user}
-    setUser = {setUser}
-    />
+    <AddUser />
 </Route>
 
 <Route  path="/add/teacher">
-    <AddTeacher
-   mentor={mentor}
-   setMentor={setMentor}
-    />
+    <AddTeacher />
 </Route>
 
 
 <Route  path="/user/:id">
-    <UserDetails
-    user = {user}
-    />
+    <UserDetails />
 </Route>
 
 <Route  path="/teachers/:id">
-    <TeacherDetails
-    mentor={mentor}
-    
-    />
+    <TeacherDetails />
 </Route>
 
 <Route  path="/edit/:id">
-    <EditUser
-    user = {user}
-    setUser = {setUser}
-    />
+    <EditUser/>
 </Route>
 
 <Route  path="/editer/:id">
-    <EditTeacher
-    mentor={mentor}
-    setMentor={setMentor}
-    />
+    <EditTeacher/>
 </Route>
 
 

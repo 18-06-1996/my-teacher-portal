@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { AppState } from "../context/AppProvider";
 import { BaseApp } from "../core/BaseApp";
 
 
-export function AddTeacher({mentor,setMentor}){
-
+export function AddTeacher(){
+    const {mentor,setMentor} = AppState();
     const history=useHistory();
 
         const [id,setId] = useState('');

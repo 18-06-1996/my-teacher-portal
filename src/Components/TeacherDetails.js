@@ -1,9 +1,10 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import { AppState } from "../context/AppProvider";
 import { BaseApp } from "../core/BaseApp";
 
-export function TeacherDetails({mentor}){
-
+export function TeacherDetails(){
+    const {mentor} = AppState();
     const{id}=useParams();
     const persons =mentor[id];
 

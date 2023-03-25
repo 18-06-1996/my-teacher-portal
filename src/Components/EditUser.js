@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
+import { AppState } from "../context/AppProvider";
 import { BaseApp } from "../core/BaseApp";
 
 
 
-export function EditUser({user,setUser}){
-
+export function EditUser(){
+    const{user, setUser} = AppState();
     const history=useHistory();
     const [idx,setIdx] = useState('');
     const [name, setName] = useState('');

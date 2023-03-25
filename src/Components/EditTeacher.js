@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
+import { AppState } from "../context/AppProvider";
 import { BaseApp } from "../core/BaseApp";
 
 
-export function EditTeacher({mentor,setMentor}){
-
+export function EditTeacher(){
+    const {mentor,setMentor} = AppState();
     const history=useHistory();
     const [idx,setIdx] = useState('');
     const [name, setName] = useState('');

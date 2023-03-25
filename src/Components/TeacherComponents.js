@@ -1,10 +1,13 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import { AppState } from "../context/AppProvider";
 import { BaseApp } from "../core/BaseApp";
 
 
 
-export function TeacherComponent({mentor,setMentor}){
+export function TeacherComponent(){
+
+    const {mentor,setMentor} = AppState();
 
     const history= useHistory();
 
